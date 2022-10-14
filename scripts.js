@@ -1,4 +1,4 @@
-// JavaScript for tp6
+// JavaScript for tp7
 
 // function to load a file from the URL "fromFile" into the object indentified by "whereTo"
 function loadFileInto(fromFile, whereTo) {
