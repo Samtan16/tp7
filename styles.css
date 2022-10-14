@@ -107,19 +107,7 @@ body {
   width: 33%;
 }
 
-/* JS for hiding and showing */
 
-#displayfunc #ingredients ul,
-#displayfunc #equipment ul,
-#displayfunc #directions ol { 
-  display: none;
-}
-
-#displayfunc #ingredients.tpShow ul,
-#displayfunc #equipment.tpShow ul,
-#displayfunc #directions.tpShow ol {
-  display: block;
-}
 
 #header h1.tp {
   font-size: 50px;

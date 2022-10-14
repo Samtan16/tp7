@@ -25,9 +25,35 @@ function loadFileInto(fromFile, whereTo) {
 
 }
 
+//new recipe object
+function Recipe(recipeName, contributorName, imageURL, ingredientsURL, equipmentURL, directionsURL) {
+  
+  this.recipeName = recipeName;
+  this.contributor = contributorName;
+  this.imageURL = imageURl;
+  this.ingredients = ingredientsURL;
+  this.equipment = equipmentURL;
+  this.directions = directionsURL;
+  
+  this.displayRecipe = function() {
+    
+    document.querySelector("#header h1").innerHTML = this.recipeName;
+    document.querySelector("#contributor").innerHTML = this.contributor;
+    document.querySelector("#header").style.backgroundImage = "url(" + this.imageURL + ")";
+    loadFileInto(this.ingredients, "#ingredients ul");
+    loadFileInto(this.equipment, "#equipment ul");
+    loadFileInto(this.directions, "#directions ol");
+  }
+  
+  LemonPankoCrustedSalmon = new Recipe("Lemon Panko Crusted Salmon", "Samuel", "images/salmon.jpg", "ingredients.html", "equipment.html", "directions.html");
+  
+}
+
 window.onload = function() {
 
-  
+  document.querySelector("#firstRecipe").onclick = function() {
+    LemonPankoCrustedSalmon.displayRecipe();
+  }
 
 
 
